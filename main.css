@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.main .box {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    transition: 0.5s;
+}
+
+.main .box:hover {
+    transform: translateY(20px);
+    transition: 0.3s;
+}
+
+.main .box::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #de6161, #2657eb);
+}
+
+.main .box::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #de6161, #2657eb);
+    filter: blur(50px);
+}
+
+.main .box span {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+
+.main .box .content {
+    position: relative;
+    z-index: 2;
+    padding: 25px 50px;
+}
+
+.main .box .content h1 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.main .box .content p {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.main .box .content a {
+    font-size: 14px;
+    color: #000;
+    background: white;
+    display: inline-block;
+    padding: 8px 30px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
